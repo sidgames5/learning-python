@@ -1,14 +1,17 @@
 # https://www.youtube.com/watch?v=rfscVS0vtbw
-# left off at 1:18:57
+# left off at 2:07:18
 
-lucky_numbers = [1, 2, 3, 5, 7, 11, 13, 17]
-friends = ["Oscar", "Kevin", "Karen", "Jim", "Oscar", "Toby"]
-friends.append("Carl")
-friends.insert(1, "James")
-friends.remove("Karen")
-print(friends.count("Oscar"))
-print(friends)
-friends.sort()
-friends2 = friends.copy()
-print(friends)
-print(friends2)
+num1 = float(input("First number: "))
+num2 = float(input("Second number: "))
+op = input("Operator: ")
+
+if (op == "+"):
+    print(num1 + num2)
+elif (op == "-"):
+    print(num1 - num2)
+elif (op == "*"):
+    print(num1 * num2)
+elif (op == "/"):
+    print(num1 / num2)
+else:
+    print("Error: invalid operator")
