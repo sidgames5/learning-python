@@ -1,17 +1,20 @@
 # https://www.youtube.com/watch?v=rfscVS0vtbw
-# left off at 2:07:18
+# left off at 2:32:44
 
-num1 = float(input("First number: "))
-num2 = float(input("Second number: "))
-op = input("Operator: ")
+secret_word = "supercalifragilisticexpialidocious"
+guess = ""
+guesses = 1
+guess_limit = 3
 
-if (op == "+"):
-    print(num1 + num2)
-elif (op == "-"):
-    print(num1 - num2)
-elif (op == "*"):
-    print(num1 * num2)
-elif (op == "/"):
-    print(num1 / num2)
-else:
-    print("Error: invalid operator")
+guess = input("Enter a guess: ")
+while guess != secret_word:
+    if (guesses >= guess_limit):
+        print("You failed! The word is " + secret_word)
+        break
+    print("Wrong!")
+    guess = input("Guess again: ")
+    guesses += 1
+
+
+if (guesses < guess_limit):
+    print("You got it in " + str(guesses) + " tries!")
