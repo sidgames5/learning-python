@@ -1,20 +1,11 @@
 # https://www.youtube.com/watch?v=rfscVS0vtbw
-# left off at 2:32:44
+# left off at 2:41:20
 
-secret_word = "supercalifragilisticexpialidocious"
-guess = ""
-guesses = 1
-guess_limit = 3
+friends = ["Jim", "Kevin", "John"]
 
-guess = input("Enter a guess: ")
-while guess != secret_word:
-    if (guesses >= guess_limit):
-        print("You failed! The word is " + secret_word)
-        break
-    print("Wrong!")
-    guess = input("Guess again: ")
-    guesses += 1
-
-
-if (guesses < guess_limit):
-    print("You got it in " + str(guesses) + " tries!")
+for index in range(len(friends)):
+    if index == 0:
+        print("first iteration")
+    else:
+        print("not first")
+    print(friends[index])
