@@ -1,18 +1,6 @@
 # https://www.youtube.com/watch?v=rfscVS0vtbw
-# left off at 3:00:18
+# left off at 3:21:26
 
-import random
-
-
-def translate(phrase):
-    result = ""
-    for letter in phrase:
-        if letter.lower() in "aeiou":
-            result += str(random.randint(0, 9))
-        else:
-            result += letter
-    return result
-
-
-phrase = input("Enter a phrase: ")
-print(translate(phrase))
+employees = open("employees.txt", "r")
+print(employees.readlines())
+employees.close()
