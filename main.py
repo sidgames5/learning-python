@@ -1,9 +1,18 @@
 # https://www.youtube.com/watch?v=rfscVS0vtbw
-# left off at 2:52:41
+# left off at 3:00:18
 
-number_grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [0]]
+import random
 
 
-for row in number_grid:
-    for col in row:
-        print(col)
+def translate(phrase):
+    result = ""
+    for letter in phrase:
+        if letter.lower() in "aeiou":
+            result += str(random.randint(0, 9))
+        else:
+            result += letter
+    return result
+
+
+phrase = input("Enter a phrase: ")
+print(translate(phrase))
