@@ -1,6 +1,8 @@
 # https://www.youtube.com/watch?v=rfscVS0vtbw
-# left off at 3:43:56
+# left off at 3:57:37
 
-import useful_tools
+from Student import Student
 
-print(useful_tools.roll_dice(6))
+student1 = Student("Dave", [93, 88, 99, 100, 81])
+print(student1.name)
+print(student1.gpa)
